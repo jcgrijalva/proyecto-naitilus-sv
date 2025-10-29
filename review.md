@@ -1,4 +1,3 @@
-# Sistema de Gestión de Facturas Electrónicas - El Salvador
 
 ## 🏗️ Arquitectura General
 
@@ -13,34 +12,6 @@
 | Despliegue frontend    | Vercel                                   | Hosting del cliente Next.js |
 | Despliegue backend     | Render                                   | Hosting del servidor NestJS |
 | Panel administrativo   | Next.js + Tailwind CSS                   | Gestión de usuarios, reportes, auditoría |
-
----
-
-## 🔐 Módulos Clave
-
-- Autenticación con JWT y roles (admin, contador, auditor)
-- Gestión de clientes y productos (CRUD con validaciones fiscales)
-- Generación de factura electrónica:
-  - Formato XML/PDF
-  - Firma digital
-  - Envío al Ministerio
-  - Almacenamiento en Firebase
-- Historial y auditoría de acciones
-- Panel administrativo con reportes y exportación
-
----
-
-## 🔄 Flujo de Emisión de Factura
-
-1. Usuario crea factura desde Next.js
-2. NestJS valida y genera el documento
-3. Se firma digitalmente
-4. Se envía al Ministerio de Hacienda
-5. Se guarda en MongoDB Atlas y Firebase Storage
-
----
-
-## 🔌 Integraciones Sugeridas
 
 - Firebase Admin SDK para subir y recuperar archivos
 - Mongoose como ORM para MongoDB
